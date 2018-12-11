@@ -8,13 +8,13 @@ output reg [63:0]outpc;
 
 
  always @ ( posedge clock ) 
-                 begin
+ begin
 
-		#delay	if(reset == 1)
-				outpc = 0;
-			else
-              		       outpc = inpc ;
+	#delay	if(reset == 1)
+		outpc = 0;
+	else
+   		outpc = inpc ;
  
-                  end
+  end
 
 endmodule
