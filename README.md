@@ -11,6 +11,6 @@ Includes:
   - AluControl (implemented)
   - ShiftLeft2 (implemented)
   - DataMemory (implemented)
-  - InstructionMemory
-  - SignExtended
-  - Multiplexer
+  - InstructionMemory (implemented)
+  - SignExtended (implemented)
+  - Multiplexer (implemented)
