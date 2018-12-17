@@ -4,7 +4,7 @@ input [63:0]outpc;
 
 //output
 output  [31:0]instruction;
-//need mem & i
+
 reg [31:0] memory [31:0];
 integer i;
          
