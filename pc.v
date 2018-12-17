@@ -1,5 +1,5 @@
 
-module pc(inpc,reset,clock,outpc);
+module pc(inpc, reset, clock, outpc);
 parameter delay=10;
 input [63:0]inpc;
 input reset;

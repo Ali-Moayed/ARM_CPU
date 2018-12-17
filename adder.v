@@ -1,5 +1,5 @@
 
-module Adder(input1,input2,out);
+module Adder(input1, input2, out);
 
        input  [63:0]input1;
        input  [63:0]input2;

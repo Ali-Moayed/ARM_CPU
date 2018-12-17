@@ -9,15 +9,17 @@ input CLK;
 
 parameter delay = 10;
 
-output  [63:0]Adata;
-output  [63:0]Bdata;
+output reg [63:0]Adata;
+output reg [63:0]Bdata;
 
 reg [31:0] registersTable [63:0];
 
 //assigning data of addressed registers into outputs
-  assign Adata <= registersTable[A];
-  assign Bdata <= registersTable[B];
-
+always@(A|B)
+  begin
+  Adata <= registersTable[A];
+  Bdata <= registersTable[B];
+  end
 
 //writing data into addressed register
 always@(posedge CLK)
