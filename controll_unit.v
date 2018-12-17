@@ -12,7 +12,7 @@ always@(opcode)
 			//R-format
 			11'b1xx0101x000: 
 			begin
-				{Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp1,ALUOp0} <= 9'b00100010	;
+				{Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp1,ALUOp0} <= 9'b000100010;
 			end
 			//LDUR
 			11'b11111000010: begin 
