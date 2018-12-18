@@ -12,7 +12,10 @@ initial
 begin
 	for (i=0; i<32; i=i+1) memory[i] = 32'b0;
 
-	memory[0] = 32'b00000000000000000000000000000000; // given instruction 
+	memory[0] = 8'h8B1F03E5;
+	memory[1] = 8'hF84000A4;
+	memory[2] = 8'h8B040086;
+	memory[3] = 8'hf80010a6;
 end
 
 assign instruction =  memory[outpc];

@@ -12,7 +12,7 @@ reg [31:0] datamemory [63:0];
 integer i=0;
 initial
 begin
-    for (i=0; i<32; i=i+1) datamemory[i] = 0;
+    for (i=0; i<5; i=i+1) datamemory[i] = 5;
 end
 
 always@(MemRead)
