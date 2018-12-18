@@ -1,16 +1,16 @@
 # ARM_CPU
-  implementation of ARM cpu with Verilog
+implementation of ARM cpu with Verilog (CPU-Test)
 
 Includes:
-  - ALU (implemented)
-  - RegisterBank (implemented)
-  - Clock (implemented)
-  - Adder (implemented)
-  - ProgramCounter (implemented)
-  - ControlUnit (implemented)
-  - AluControl (implemented)
-  - ShiftLeft2 (implemented)
-  - DataMemory (implemented)
-  - InstructionMemory (implemented)
-  - SignExtended (implemented)
-  - Multiplexer (implemented)
+  - ALU
+  - RegisterBank
+  - Clock
+  - Adder
+  - ProgramCounter
+  - ControlUnit
+  - AluControl
+  - ShiftLeft2
+  - DataMemory
+  - InstructionMemory
+  - SignExtended
+  - Multiplexer
