@@ -4,8 +4,9 @@ output reg clk;
 
 always
   begin
-    #100 clk = 1'b1;
+    clk = 1'b1;
 
     #100 clk = 1'b0;
+    #100;
   end
 endmodule

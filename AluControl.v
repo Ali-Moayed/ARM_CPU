@@ -6,7 +6,7 @@ output reg [3:0] op;
 
 // figure 4.13
 // page 273
-always @(*) 
+always @(ALUOp,opCode) 
 begin
     casex(ALUOp)
 	2'b00: op <= 4'b0010;

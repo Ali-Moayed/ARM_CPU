@@ -9,24 +9,29 @@ input CLK;
 
 parameter delay = 10;
 
-output reg [63:0]Adata;
-output reg [63:0]Bdata;
+output  [63:0]Adata;
+output  [63:0]Bdata;
 
-reg [31:0] registersTable [63:0];
+reg [63:0] registersTable [31:0];
 
+integer i;
+initial
+begin
+    for (i=0; i<32; i=i+1) registersTable[i] = i;
+end
 //assigning data of addressed registers into outputs
-always@(A|B)
-  begin
-  Adata <= registersTable[A];
-  Bdata <= registersTable[B];
-  end
+
+
+assign  Adata = registersTable[A];
+assign  Bdata = registersTable[B];
+
 
 //writing data into addressed register
 always@(posedge CLK)
   begin
-  #delay if(W)
+  if(W)
     begin
-    registersTable[C] = Cdata;
+    #delay registersTable[C] = Cdata;
     end
   end
 

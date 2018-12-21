@@ -46,14 +46,9 @@ reg pcReset;
 initial  
 begin  
 	pcReset=1'b1;
+        #10 pcReset = 1'b0; 
 end 
 
-always
-begin
-
-	#110 pcReset = 1'b0; 
-
-end
 
 CLK clock(clk);
 
@@ -74,6 +69,6 @@ alu alu(reg2ALU, mux2ALU, ALUcon2ALU, ALU2and, ALU2mux_mem);
 
 mux2to1 mux2to1_3(mux2pc, add2mux_1, add2mux_2, con2and & ALU2and);
 Data_Memory Data_Memory(ALU2mux_mem, reg2mux_mem, con2mem_1, con2mem_2, mem2mux);
-mux2to1 mux2to1_4(mux2reg_2, mem2mux, ALU2mux_mem, con2mux_2);
+mux2to1 mux2to1_4(mux2reg_2, ALU2mux_mem, mem2mux, con2mux_2);
 
 endmodule
