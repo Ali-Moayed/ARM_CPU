@@ -15,7 +15,7 @@ begin
                else if (signextendedin[31:24] == 8'b10110100)     // CBZ-type
                      begin 
                       signextendedout[18:0] = signextendedin[23:5];
-                      signextendedout[63:19] = {65{signextendedout[18]}};
+                      signextendedout[63:19] = {45{signextendedout[18]}};
                      end 
           
                else      // D-type

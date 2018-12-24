@@ -7,7 +7,7 @@ input [n-1:0]in;
 output reg [n-1:0]out;
 
 initial
-    out <= 0;
+    #10 out <= 0;
 
 always@(posedge Clock)
 begin
